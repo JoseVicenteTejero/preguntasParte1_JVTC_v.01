@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>PREGUNTA 49 - JOSE VICENTE TEJERO</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- https://developers.google.com/speed/libraries#jquery -->
+</head>
+<body>
+    <h1>PREGUNTA 49 - JOSE VICENTE TEJERO</h1>
+
+    <p>
+        <br>
+        You are developing an HTML5 page that has an element with an ID of picture. The page includes the
+        following HTML<br><br>
+
+        &ltdiv&gt <br>
+        Picture:&ltbr /&gt <br>
+        &ltdiv id="picture"&gt  Picture &lt/div&gt<br>
+        &lt/div&gt<br>
+
+        <div>
+            <!-- Picture:<br /> -->
+            <div id="picture">  Picture </div>
+        </div>
+        <br><br><br><br>
+
+
+        You need to move the picture element lower on the page by five pixels. <br>
+        Which two lines of code should you use? Each correct answer presents part of the solution. <br>
+        NOTE: Each correct selection is worth one point.<br><br>
+        EL ENUNCIADO INDICA: &ltdiv id="picture"&gt  &lt/div&gt  Y DEBERÍA SER &ltdiv id="picture"&gt  Picture &lt/div&gt  <br><br>
+
+        <XMP>
+            function validateA() {
+                document.getElementById("picture").style.position = "relative";
+                return;
+            }
+
+            // OPCIÓN B
+            function validateB() {
+                document.getElementById("picture").style.top = "50px";
+                return;
+            }
+
+            // OPCIÓN C
+            function validateC() {
+                document.getElementById("picture").style.top = "-50px";
+                return;
+            }
+
+            // OPCIÓN D
+            function validateD() {
+                document.getElementById("picture").style.position = "absolute";
+               return;
+            }
+        </XMP>
+        Correct Answer: B - PUEDE COMPROBARSE PULSANDO EL BOTÓN<br>
+        Section: Volume B<br>
+        Explanation<br>
+        We use relative position to move the position 5 pixels lower on page.<br>
+        Using a negative value would move the picture higher on the page.<br>
+        Note:<br>
+        The top property sets or returns the top position of a positioned element.<br>
+        This property specifies the top position of the element including padding, scrollbar, border and margin.<br>
+        Syntax<br>
+        Set the top property:<br>
+        Object.style.top="auto|length|%|inherit"<br>
+        Where:<br>
+        Length defines the top position in length units. Negative values are allowed<br>
+
+    </p>
+    
+            <script>
+                // OPCIÓN A
+                function validateA() {
+                    document.getElementById("picture").style.position = "relative";
+                    return;
+                }
+
+                // OPCIÓN B
+                function validateB() {
+                    document.getElementById("picture").style.top = "50px";
+                    return;
+                }
+
+                // OPCIÓN C
+                function validateC() {
+                    document.getElementById("picture").style.top = "-50px";
+                    return;
+                }
+
+                // OPCIÓN D
+                function validateD() {
+                    document.getElementById("picture").style.position = "absolute";
+                   return;
+                }
+
+            </script>
+
+
+        <button type="button" onclick="validateA()">OPCION A</button>
+        <button type="button" onclick="validateB()">OPCION B</button>
+        <button type="button" onclick="validateC()">OPCION C</button>
+        <button type="button" onclick="validateD()">OPCION D</button>
+    
+</body>
+    </html>

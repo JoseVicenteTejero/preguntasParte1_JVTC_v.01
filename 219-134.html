@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .mystyleA {
+          font-style: Arial;
+        }
+        .mystyleD {
+          font-family: Arial;
+        }
+  
+        </style>
+</head>
+<body>
+    <h1>PREGUNTA 134 - JOSE VICENTE TEJERO</h1>
+
+    <p>
+        <br> <br>
+        An HTML page contains no embedded JavaScript or CSS code. The body of the page contains only the<br>
+        following line of code.<br>
+
+        <p id="test">test</p><br>
+
+        A CSS style sheet must be applied dynamically. The style must visibly change the appearance of the<br>
+        paragraph on the page.<br>
+        
+        You need to apply a style to the paragraph.<br>
+        Which line of code should you use?<br><br>
+        A. document.getElementById("test").style.top = "5px";<br>
+        B. document.getElementById("test").style.border = "0";<br>
+        C. document.getElementById("test").style.color = "red";<br>
+        D. document.getElementById ("test").style.position = "absolute";<br><br><br>
+
+        Correct Answer: C - ES LA CORRECTA YA QUE CAMBIA LA APARIENCIA, NO LA POSICIÓN<br>
+        Section: Volume D<br>
+        Explanation<br>
+        Explanation/Reference:<br>
+        <br><br><br>
+  
+        <script>
+            // OPCIÓN A
+            function validateA() {
+                document.getElementById("test").style.top = "5px";
+                return;
+            }
+        
+            // OPCIÓN B
+            function validateB() {
+                document.getElementById("test").style.border = "0";
+                return;
+            }
+        
+            // OPCIÓN C
+            function validateC() {
+                document.getElementById("test").style.color = "red";
+                return;
+            }
+        
+            // OPCIÓN D
+            function validateD() {
+                document.getElementById("picture").style.position = "absolute";
+                return;
+            }
+        
+        </script>
+        <br><br>
+        
+        <button type="button" onclick="validateA()">OPCION A</button>
+        <button type="button" onclick="validateB()">OPCION B</button>
+        <button type="button" onclick="validateC()">OPCION C</button>
+        <button type="button" onclick="validateD()">OPCION D</button>
+
+        <br><br><br><br>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>PREGUNTA 49 - JOSE VICENTE TEJERO</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- https://developers.google.com/speed/libraries#jquery -->
+</head>
+<body>
+    <h1>PREGUNTA 49 - JOSE VICENTE TEJERO</h1>
+
+
+    <xmp>
+        You are developing a web page that consumes a Windows Communication Foundation (WCF) service. The
+        page includes the following code segment.
+        var xhr = new XMLHttpRequest() ;
+        The page uses the xhrHandler() method to listen for changes to the request status of the WCF service
+        calls. It uses the xmlToJavaScript() method to convert the response from the WCF service to a JavaScript
+        object.
+        The xhrHandler() method must be called automatically each time the request status changes.
+        You need to add the event handler to the request object.
+        Which line of code should you use?
+
+        A. xhr.onCallback = xhrHandler;
+        B. xhr.onreadystatechange = xhrHandler;
+        C. xhr.readyState = xhrHandler;
+        D. xhr.status = xhrHandler;
+
+        Correct Answer: B - ES LA RESPUESTA CORRECTA
+        Section: Volume B
+        Explanation
+        Explanation/Reference:
+        Explanation:
+        / onreadystatechange: Sets or retrieves the event handler for asynchronous requests.
+        Specifies a reference to an event handler for an event that fires at every state change
+        readyState
+        Returns the state of the object as follows:
+        * 0 = uninitialized – open() has not yet been called.
+        * 1 = open – send() has not yet been called.
+        * 2 = sent – send() has been called, headers and status are available.
+        * 3 = receiving – Downloading, responseText holds partial data (although this functionality is not available in
+        IE [3])
+        * 4 = loaded – Done.
+
+        / Example (assuming that there is a function handler():
+        var oReq = getXMLHttpRequest();
+        if (oReq != null) {
+        oReq.open("GET", "http://localhost/test.xml", true);
+        oReq.onreadystatechange = handler;
+        oReq.send();
+        Reference: XMLHttpRequest object; XMLHttpRequest (XHR)
+      
+    </xmp>
+
+
+    <br>
+    REFERENCIA:
+    <a href="https://msdn.microsoft.com/en-us/library/ie/ms535874(v=vs.85)">msdn.microsoft</a> <br>
+    <a href="http://mrfwebdesign.blogspot.ca/2008/11/xmlhttprequest-xhr.html">mrfwebdesign</a> <br>
+
+</body>
+</html>

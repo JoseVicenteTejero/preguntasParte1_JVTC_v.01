@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>PREGUNTA 117 - JOSE VICENTE TEJERO</title>
+
+    <script>
+    
+        function madeSelection(element, message) {
+                    if (element.value === "Please Choose" ) {
+                            alert (message);
+                            element.focus();
+                            return false;
+                        } 
+                        else {
+                            return true;
+                        }
+        };
+        /* https://developers.google.com/speed/libraries#jquery */
+    </script>
+    
+
+</head>
+<body>
+    <h1>PREGUNTA 117 - JOSE VICENTE TEJERO</h1>
+
+    
+        <br>
+        HOTSPOT
+        You develop an HTML5 webpage that contains the following markup and code:<br><br>
+
+        <XMP>
+
+            <form>
+                <label for='city'>City:</label>
+                    <select id='city'>
+                        <option>Please Choose</option>
+                        <option>Moscow</option>
+                        <option>London</option>
+                        <option>Paris</option>
+                    </select>
+            
+                <input type='button' id='submit' value='Submit' 
+                onclick="madeSelection(document.getElementById('city'), 'Please Select A City')">
+            </form>
+
+            You have the following requirements:
+            Display a message if users select the first OPTION element, and then submit the form.
+            Do not display an alert message if users select any other OPTION element, and then submit the form.
+            You need to implement the madeSelection() function.
+            How should you complete the relevant code? To answer, select the appropriate options in the answer area.
+            NOTE: Each correct selection is worth one point.
+
+            ANSWER AREA:
+            function madeSelection(element, message) {
+
+                if (element.id === 0) {
+                if (element.value === "-1" ) {
+                if (element.text === "Please Choose" ) {
+                if (element.value === "Please Choose" ) {   OPCIÓN CORRECTA Compara valor y tipo
+                        alert (message);
+
+                        
+                        element.clear();
+                        element.focus();                    OPCIÓN CORRECTA
+
+
+                        return false;
+                    } 
+                    else {
+                        
+                        
+                        return true;                       OPCIÓN CORRECTA
+                        return false;
+                    }
+            };
+
+        </XMP>
+
+
+        Explanation<br>
+        * The <select> element is used to create a drop-down list.<br>
+            The <option> tags inside the <select> element define the available options in the list.<br><br>
+            option.value<br>
+            text<br>
+            Specifies the value to be sent to a server<br>
+            Reference.<br>
+
+            <br><br>
+ 
+    
+
+    <form>
+                <label for='city'>City:</label>
+                    <select id='city'>
+                        <option>Please Choose</option>
+                        <option>Moscow</option>
+                        <option>London</option>
+                        <option>Paris</option>
+                    </select>
+            
+                <input type='button' id='submit' value='Submit'  onclick="madeSelection(document.getElementById('city'),'Please Select A City')">;
+            </form>
+
+    <br><br><br>
+    References:
+    <a href=" https://www.w3schools.com/tags/tag_option.asp">Ayuda en  W3schools></a>
+    <br><br><br>
+
+
+</body>
+</html>

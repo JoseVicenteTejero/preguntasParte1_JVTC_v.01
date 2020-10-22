@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <style>
+        .mystyleA {
+          font-style: Arial;
+        }
+        .mystyleD {
+          font-family: Arial;
+        }
+  
+        </style>
+</head>
+<body>
+    <h1>PREGUNTA 202 - JOSE VICENTE TEJERO</h1>
+        <p>
+        <br> <br>
+        <p> You are developing a form that captures a user's email address by using HTML5 and jQuery.<br>
+            The form must capture the form elements as a string. You need to implement this functionality.<br>
+            How should you develop the form? (To answer, select the appropriate options from the drop-down lists in<br>
+            the answer area.)<br>
+            Hot Area:<br>
+
+            <xmp>
+                <!DOCTYPE html>
+                <html">
+                <head>
+                    <script src="http://code.jquery.com/jquery-latest.js"></script>
+                </head>
+                <body>
+                    <form>
+                        <input type="text" name="email" />
+                        <input type="submit" name="Submit"/>
+                    </form>
+                    <script>
+                            $("form").submit (function() {
+                                    var str;
+                                        A.- str = $("form") serialize();
+                                        B.- str = decodeURIComponent(str);
+                                        C.- str = $("form") contents.toString();
+                                        D.- str = $("form").toLocaleString();
+                                        E.- str = decodeURI(str);
+                            
+                                        A.- str = $("form") serialize();
+                                        B.- str = decodeURIComponent(str);
+                                        C.- str = $("form") contents.toString();
+                                        D.- str = $("form").toLocaleString();
+                                        E.- str = decodeURI(str);
+                            return true;
+                        });
+                    </script>
+                </body>
+            </xmp>
+
+            Correct Answer:</p><br>
+        <p> Which line of code should you use?<br>
+            LA SOLUCIÓN ES A Y B VIENDO LA TEORÍA - NO TENGO CLARO CÓMO IMPLEMENTARLO <br>
+            The .serialize() method creates a text string in standard URL-encoded notation. It can act on a jQuery object that has selected individual form controls, such as: &ltinput&gt<br>  
+            decodeURIComponent(uri)  - Return Value:	A String, representing the decoded URI 
+        </p>
+        <br>
+        <form>
+            <input type="text" name="email"/>
+            <input type="submit" name="Submit"/>
+        </form>
+        <br><br>
+        <p id="salida"></p>
+
+       
+       
+        <br>       
+
+        <script>
+                   
+                    $("form").submit (function() {
+                        var str;
+                        var res;
+                        str = $("form").serialize();
+                        res = "serialize: "+str;
+                        str = decodeURIComponent(str);
+                        res += res + " decode "+str;
+                        document.getElementById("salida").innerHTML = res;
+                        return true;
+                    });
+         /*
+            // OPCIÓN A
+            function validateA() {
+                document.getElementById("blue").style.display = "none";
+                return;
+            }
+        
+            // OPCIÓN B
+            function validateB() {
+                $("#blue").css("visibility", "collapse");
+                return;
+            }
+        
+            // OPCIÓN C
+            function validateC() {
+                document.getElementById("blue").style.visibility = "hidden";
+                return;
+            }
+        
+            // OPCIÓN D
+            function validateD() {
+                $("#blue").css("visibility", "hidden");
+                return;
+            }
+            // OPCIÓN E
+            function validateE() {
+                document/getElementById("blue").style.visibility = "hidden";
+                return;
+            }
+            */
+        
+        </script>
+        <br><br>
+        <!--
+        <button type="button" onclick="validateA()">OPCION A</button>
+        <button type="button" onclick="validateB()">OPCION B</button>
+        <button type="button" onclick="validateC()">OPCION C</button>
+        <button type="button" onclick="validateD()">OPCION D</button>
+        <button type="button" onclick="validateE()">OPCION E</button>
+        -->
+        <br><br><br><br>      <br><br><br><br>
+
+</body>
+</html>

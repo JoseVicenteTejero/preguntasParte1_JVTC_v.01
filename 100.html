@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>PREGUNTA 100 - JOSE VICENTE TEJERO</title>  
+
+</head>
+<body>
+    <h1>PREGUNTA 100 - JOSE VICENTE TEJERO</h1>
+
+            
+        DRAG DROP<br>
+        You are creating a function named getText().<br>
+        The function must retrieve information from text files that are stored on a web server.<br>
+        You need to develop the function to meet the requirement.<br>
+        Which code segment or segments should you use? To answer, drag the appropriate commands to the<br>
+        correct targets. Each code segment may be used once, more than once, or not at all. You may need to drag<br>
+        the split bar between panes or scroll to view content.<br>
+        NOTE: Each correct selection is worth one point.<br>
+        Select and Place:<br>
+
+        <xmp>
+            You have the following requirements:
+            Display a message if users select the first OPTION element, and then submit the form.
+            Do not display an alert message if users select any other OPTION element, and then submit the form.
+            You need to implement the madeSelection() function.
+            How should you complete the relevant code? To answer, select the appropriate options in the answer area.
+            NOTE: Each correct selection is worth one point.
+
+            ANSWER AREA:
+
+            <body>
+                <form>
+                    <input type="button" value="Submit" onclick="getText()">
+                    <div id="results" ></div>
+                </form>
+                <script>
+                    function gestText() {
+                        var req = new SMLHttpRequest();
+                            _________________________
+                            RESPUESTA INSTRUCCIÓN 1 - OPCIÓN A
+                            -------------------------
+                        if (req.readyState == 4 && req.status == 200 {
+                            document.getElementById("results").innerHTML = req.responseText;
+                        }
+                        _________________________
+                         RESPUESTA INSTRUCCIÓN 2 - OPCIÓN C
+                        -------------------------
+                    }
+                </script>
+            </body>
+
+            OPCIONES:
+            OPCIÓN A.- req.onreadystatechange = function {
+            OPCIÓN B.- req.open("GET, "TextFile.txt", true);
+                       req.send;
+            OPCIÓN C.- window.onload=function() {
+            OPCIÓN D.- req.gestResponseHeader("TextFile.txt");
+
+            _________________________________________________
+            Explanation/Reference:
+            Explanation:
+            * onreadystatechange
+            When a request to a server is sent, we want to perform some actions based on the response.
+            The onreadystatechange event is triggered every time the readyState changes. 
+            onreadystatechange	Stores a function (or the name of a function) to be called automatically each time the readyState property changes
+            The readyState property holds the status of the XMLHttpRequest.
+            readyState	Holds the status of the XMLHttpRequest. Changes from 0 to 4:
+                    0: request not initialized
+                    1: server connection established
+                    2: request received
+                    3: processing request
+                    4: request finished and response is ready
+            status
+                	200: "OK"
+                    404: Page not found
+            When readyState is 4 and status is 200, the response is ready.
+
+            Example:
+            xmlhttp.onreadystatechange=function()
+            {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+            document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+            }
+            }
+            * Send a Request To a Server
+          
+            To send a request to a server, we use the open() and send() methods of the XMLHttpRequest object:
+            xmlhttp.open("GET","xmlhttp_info.txt",true);
+            xmlhttp.send();
+ 
+        </xmp>
+
+
+    <br><br><br>
+    References:
+    <a href=" https://www.quanzhanketang.com/ajax/ajax_xmlhttprequest_onreadystatechange.html">Ayuda en quanzhanketang></a>
+    <a href=" https://www.w3schools.com/js/js_ajax_http.asp">Ayuda en  W3schools></a>
+    <br><br><br>
+
+
+</body>
+</html>

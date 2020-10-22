@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>PREGUNTA 32 - JOSE VICENTE TEJERO</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- https://developers.google.com/speed/libraries#jquery -->
+</head>
+<body>
+    <h1>PREGUNTA 32 - JOSE VICENTE TEJERO</h1>
+
+    <p>
+        <br>
+        You are developing a web form that includes the following HTML.<br><br>
+
+        <input id="txtValue" type="text" /> <br><br><br><br>
+
+
+        You need to ensure that a value is entered into txtValue before the form is submitted.<br>
+        Which code segment should you use?<br>
+
+        <XMP>
+            // OPCIÓN A
+            function validateA() {
+                var name = $("#txtValue").val();
+                if (name == null || name == "")
+                    alert("please enter valid value");
+                return;
+            }
+           
+            // OPCIÓN B
+            function validate() {
+                var value = $("#txtValue").val();
+                var regex = /^(\d\,\.]*$/;
+                if (!regex.test(value))
+                    alert("please enter valid value");
+                return;
+            }
+    
+            // OPCIÓN C
+            function validate() {
+                var name = $("#txtValue").get();
+                if (name == null || name == "")
+                    alert("please enter valid value");
+                return;
+            }
+    
+            // OPCIÓN D
+            function validate() {
+                var ma, e = $("#txtValue").get();
+                var regex = /^(A-Za-z] {3}/;
+                if (!regex.test(value) || value == "")
+                    alert("please enter valid value");
+                return;
+            }
+
+        </XMP>
+
+
+        Correct Answer: A - ES LA ÚNICA OPCIÓN QUE CONTROLA QUE SE CONSIGNE UN VALOR EN EL INPUT<br>
+        Section: Volume A<br>
+        Explanation<br>
+        Explanation/Reference:<br>
+        Explanation:<br>
+        Input Text Object Properties include:<br>
+        
+        value: Setsor returns the value of the value attribute of the text field<br>
+        Check if text is a null value or an empty string.<br>
+        References:
+        <a href=" https://www.w3schools.com/jsref/dom_obj_text.asp">Ayuda en  W3schools></a>
+    </p>
+
+    <script>
+        // OPCIÓN A
+        function validateA() {
+            var name = $("#txtValue").val();
+            if (name == null || name == "")
+                alert("please enter valid value");
+            return;
+        }
+       
+        // OPCIÓN B
+        function validate() {
+            var value = $("#txtValue").val();
+            var regex = /^(\d\,\.]*$/;
+            if (!regex.test(value))
+                alert("please enter valid value");
+            return;
+        }
+
+        // OPCIÓN C
+        function validate() {
+            var name = $("#txtValue").get();
+            if (name == null || name == "")
+                alert("please enter valid value");
+            return;
+        }
+
+        // OPCIÓN D
+        function validate() {
+            var ma, e = $("#txtValue").get();
+            var regex = /^(A-Za-z] {3}/;
+            if (!regex.test(value) || value == "")
+                alert("please enter valid value");
+            return;
+        }
+        
+    </script>
+
+    <button type="button" onclick="validateA()">OPCION A</button>
+    <button type="button" onclick="validateB()">OPCION B</button>
+    <button type="button" onclick="validateC()">OPCION C</button>
+    <button type="button" onclick="validateD()">OPCION D</button>
+</body>
+</html>

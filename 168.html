@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>PREGUNTA 168 - JOSE VICENTE TEJERO</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- https://developers.google.com/speed/libraries#jquery -->
+</head>
+<body>
+    <h1>PREGUNTA 168 - JOSE VICENTE TEJERO</h1>
+
+    <xmp>
+        You are developing an HTML page that includes the following code.
+
+        <h1 id="header">A Static Page</h1>
+
+        You need to modify the content of the H1 element dynamically by using JavaScript.
+        Which code segment should you use?
+
+        A.- var myHeader = document.getElementsByTagName("header");
+        myHeader = "A Dynamic Page";
+
+        B.- var myHeader = document.getElementsById("header");
+        myHeader = "A Dynamic Page";
+
+
+        C.- var myHeader = document.getElementsByTagName("header");
+        myHeader.innerHTML = "A Dynamic Page";
+
+        D.- var myHeader = document.getElementsById("header");
+        myHeader.innerHTML = "A Dynamic Page";
+
+        Correct Answer: D ES LA RESPUESTA CORRECTA
+        Section: Volume D
+        Explanation
+        Explanation/Reference:
+        Explanation:
+        innerHTML
+        The innerHTML property sets or returns the HTML content (inner HTML) of an element.
+
+        Example
+        Change the HTML content of a <h1> </h1> element with id="header":
+        document.getElementById("header").innerHTML = "A dynamic page";
+    </xmp>
+
+    <h1 id="header1">A Static Page</h1>
+    <script>
+        // OPCIÓN A
+        function validateA() {
+            var myHeader = document.getElementsByTagName("header1");
+            myHeader = "A Dynamic Page";
+        }
+
+        // OPCIÓN B
+        function validateB() {
+            var myHeader = document.getElementsById("header1");
+            myHeader = "A Dynamic Page";
+        }
+
+        // OPCIÓN C
+        function validateC() {
+            var myHeader = document.getElementsByTagName("header");
+            myHeader.innerHTML = "A Dynamic Page";
+        }
+
+        // OPCIÓN D
+        function validateD() {
+            var myHeader = document.getElementsById("header1");
+            myHeader.innerHTML = "A Dynamic Page";
+            return;
+        }
+
+    </script>
+    <br><br>
+    <form></form>
+    <button type="button" onclick="validateA()">OPCION A</button>
+    <button type="button" onclick="validateB()">OPCION B</button>
+    <button type="button" onclick="validateC()">OPCION C</button>
+    <button type="button" onclick="validateD()">OPCION D</button>
+    </form>
+    <br><br>
+    REFERENCIA: <br>
+    <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp">w3schols</a> <br>
+</body>
+</html>

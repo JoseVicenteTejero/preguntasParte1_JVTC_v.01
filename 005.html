@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>PREGUNTA 005 - JOSE VICENTE TEJERO</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- https://developers.google.com/speed/libraries#jquery -->
+</head>
+<body>
+    <h1>PREGUNTA 005 - JOSE VICENTE TEJERO</h1>
+
+    <p>
+        <br>
+        You are developing an application that consumes a Windows Communication Foundation (WCF) service.<br>
+The application interacts with the service by using the following code. <br><br>
+        <Xmp>
+          01  <script>
+                function getCountry(country) {
+                    $.ajax({
+                        type: "POST",
+                         contentType: "application/json; charset=utf-8",
+          06              url: "http://contoso.com/service.svc/GetCountry",
+                         data: '{"Country":' +country + '}, 
+                         dataType: "json",
+                         success: OnSuccess,
+                         error: onerror
+          11
+                    })
+                function OnSuccess(data,status) {
+
+                }
+                function OnError (request, status, error) {
+
+                }
+                }
+
+            </script>
+
+
+            You need to authenticate to the WCF service.
+            What should you do?
+                    A. At line 11, add the following lines of code:
+                    ,username: yourusername
+                    ,password: yourpassword
+                    B. At line 11, add the following line of code:
+                    ,credentials: prompt
+                    C. At line 06, replace the code with the following line of code:
+                    url: "http://contoso.com/Service.svc/GetCountry?
+                    username=username&password=password",
+                    D. At line 11, add the following line of code. The username and password will be stored in an XML file.
+                      ,credentials: credentials.xml
+
+                    Correct Answer: C - POR ELIMINACIÓN ES LA C. La funcionalidad para recibir la autenticación 
+                    debe estar en el parámetro URL, esto anula las opciones A y B, la opción D no tiene sentido.
+
+
+
+</Xmp>
+    
+        <br> 
+        <a href="https://www.w3schools.com/jquery/ajax_ajax.asp">W3Scholls</a> <br>
+        <a href="https://www.loginworks.com/blogs/call-wcf-service-using-ajax-jquery-method/">loginworksW3Schools</a>
+</body>
+</html>
